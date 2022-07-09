@@ -1,0 +1,26 @@
+@use '../utils/' as *;
+
+.header {
+  background: var(--cl-vd-blue);
+  padding-block: rem(20);
+
+  &__menu {
+    display: flex;
+    gap: rem(30);
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      font-style: normal;
+      text-transform: uppercase;
+      padding-block: rem(10);
+      color: var(--cl-white-body);
+      font-weight: normal;
+      letter-spacing: rem(1.5);
+
+      &:hover {
+        color: var(--cl-md-turquoise);
+      }
+    }
+  }
+}
