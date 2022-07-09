@@ -1,0 +1,36 @@
+@use '../utils/' as *;
+
+.wip__wrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.wip {
+  display: grid;
+  gap: rem(40);
+  text-align: center;
+
+  p {
+    max-width: rem(500);
+  }
+
+  .wip__gears {
+    position: relative;
+    max-width: 200px;
+    padding: rem(20);
+  }
+  
+  .gear--left {
+    animation: rollLeft linear 5s infinite;
+    position: relative;
+    bottom: 33px;
+    right: -67px;
+    max-width: 100px;
+  }
+  
+  .gear--right {
+    animation: rollRight linear 5s infinite;
+    max-width: 100px;
+  }
+}

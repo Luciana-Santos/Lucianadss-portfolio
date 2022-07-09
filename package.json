@@ -1,0 +1,45 @@
+{
+  "name": "static-setup",
+  "version": "1.0.0",
+  "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML and JavaScript Webpack compiler.",
+  "main": "dist/index.html",
+  "author": "LucianaSantos",
+  "scripts": {
+    "build:sass": "sass src/app/styles:dist/app/styles/",
+    "build:js": "webpack --mode production",
+    "copy:html": "copyfiles -u 1 ./src/*.html dist",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* dist",
+    "copy": "npm-run-all --parallel copy:*",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "watch:js": "webpack --mode development --watch",
+    "watch:sass": "sass  --watch src/app/styles:dist/app/styles",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
+    "watch": "npm-run-all --parallel watch:*",
+    "serve": "browser-sync start --server dist --files dist",
+    "start": "npm-run-all copy --parallel watch serve",
+    "build": "npm-run-all copy:html build:*",
+    "postbuild": "postcss dist/app/styles/*.css -u autoprefixer cssnano -r"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "copyfiles": "^2.4.1",
+    "cssnano": "^5.0.17",
+    "eslint-config-prettier": "^8.5.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.1.0",
+    "sass": "^1.49.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/plugin-transform-runtime": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "babel-loader": "^8.2.5",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  }
+}

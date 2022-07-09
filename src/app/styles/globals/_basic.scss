@@ -1,0 +1,43 @@
+@use '../utils' as *;
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  line-height: 1;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cl-md-green);
+  font-style: italic;
+  transition: .3s ease-in-out;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--cl-vd-blue);
+  color: var(--cl-white-body);
+  font-family: var(--ff-space);
+}
+
+.section {
+  padding-block: rem(30);
+}
