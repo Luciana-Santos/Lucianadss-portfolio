@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","mappings":"mBACEA,QAAQC,IAAI,kB","sources":["webpack://static-setup/./src/app/js/modules/helloWorld.js"],"sourcesContent":["export default function helloWorld() {\r\n  console.log('Hello, world!');\r\n}\r\n"],"names":["console","log"],"sourceRoot":""}
