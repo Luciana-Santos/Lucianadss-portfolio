@@ -1,0 +1,30 @@
+@use '../utils/' as *;
+
+.hero {
+  background-color: var(--cl-dk-violet);
+  background-image: url('../../../assets/img/hero_mobile.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-top: rem(60);
+  text-align: center;
+  min-height: 60vh;
+
+  h1 {
+    color: var(--cl-md-turquoise);
+    font-size: rem(20);
+    line-height: 1.4;
+    margin-bottom: rem(60);
+
+    span {
+      color: var(--cl-lt-orange);
+      font-family: var(--ff-Berkshire);
+      font-size: rem(30);
+    }
+  }
+
+  
+  @include breakpoint('small') {
+    background-image: none;
+  }
+}
+
