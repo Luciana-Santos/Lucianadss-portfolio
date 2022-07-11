@@ -76,6 +76,14 @@ body {
   border-color: transparent;
 }
 
+.titulo {
+  font-size: 1.875rem;
+  text-align: center;
+  font-family: var(--ff-Berkshire);
+  color: var(--cl-lt-orange);
+  margin-bottom: 1.875rem;
+}
+
 .container {
   width: min(100% - 2rem, 55rem);
   margin-inline: auto;

@@ -41,6 +41,7 @@ body {
   padding-block: rem(30);
 }
 
+// BUTTONS 
 .btn-container {
   display: flex;
   flex-wrap: wrap;
@@ -79,4 +80,12 @@ body {
     background: var(--cl-vd-blue);
     border-color: transparent;
   }
+}
+
+.titulo {
+  font-size: rem(30);
+  text-align: center;
+  font-family: var(--ff-Berkshire);
+  color: var(--cl-lt-orange);
+  margin-bottom: rem(30);
 }
