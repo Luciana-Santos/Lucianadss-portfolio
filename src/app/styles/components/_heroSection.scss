@@ -1,0 +1,40 @@
+@use '../utils/' as *;
+
+.hero {
+  background-color: var(--cl-dk-violet);
+  background-image: url('../../../assets/img/Untitled-1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding-block: rem(60);
+  text-align: center;
+  min-height: 50vh;
+  margin-top: rem(60);
+
+  h1 {
+    color: var(--cl-md-turquoise);
+    font-size: rem(20);
+    line-height: 1.4;
+    margin-bottom: rem(90);
+
+    span {
+      color: var(--cl-lt-orange);
+      font-family: var(--ff-Berkshire);
+      font-size: rem(36);
+    }
+
+    @include breakpoint('medium') {
+      font-size: rem(38);
+
+      span {
+        font-size: rem(66);
+      }
+    }
+  }
+  
+  @include breakpoint('medium') {
+    height: calc(100vh - 60px);
+    padding: rem(90);
+  }
+}
+
