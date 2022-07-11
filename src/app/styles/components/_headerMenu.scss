@@ -3,6 +3,10 @@
 .header {
   background: var(--cl-vd-blue);
   padding-block: rem(20);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
   &__menu {
     display: flex;
