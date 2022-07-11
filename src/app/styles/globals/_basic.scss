@@ -58,12 +58,12 @@ body {
   cursor: pointer;
   letter-spacing: rem(1.5);
   font-weight: bold;
+  transition: .3s ease;
 }
 
 .btn--yellow {
   background: var(--cl-lt-orange);
   color: var(--cl-vd-blue);
-  transition: .3s ease-out;
 
   &:hover {
     box-shadow: 0px 0px 20px #F8D092;
@@ -71,6 +71,12 @@ body {
 }
 
 .btn--blue {
-  background: var(--cl-vd-blue);
+  background: transparent;
   color: var(--cl-lt-orange);
+  border: 3px solid var(--cl-lt-orange);
+
+  &:hover {
+    background: var(--cl-vd-blue);
+    border-color: transparent;
+  }
 }
