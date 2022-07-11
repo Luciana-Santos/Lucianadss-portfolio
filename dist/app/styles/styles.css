@@ -55,20 +55,25 @@ body {
   cursor: pointer;
   letter-spacing: 0.09375rem;
   font-weight: bold;
+  transition: 0.3s ease;
 }
 
 .btn--yellow {
   background: var(--cl-lt-orange);
   color: var(--cl-vd-blue);
-  transition: 0.3s ease-out;
 }
 .btn--yellow:hover {
   box-shadow: 0px 0px 20px #F8D092;
 }
 
 .btn--blue {
-  background: var(--cl-vd-blue);
+  background: transparent;
   color: var(--cl-lt-orange);
+  border: 3px solid var(--cl-lt-orange);
+}
+.btn--blue:hover {
+  background: var(--cl-vd-blue);
+  border-color: transparent;
 }
 
 .container {
