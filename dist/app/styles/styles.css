@@ -220,7 +220,7 @@ body {
 }
 .sobre__info .links-tecs {
   display: flex;
-  gap: 1.875rem;
+  gap: 2.5rem;
   margin-top: 1.875rem;
 }
 .sobre__info .links-tecs .links a {
@@ -247,7 +247,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.3125rem;
+  gap: 1.25rem;
 }
 .sobre__info .links-tecs .tecs li {
   max-width: 49px;
