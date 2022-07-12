@@ -1,0 +1,134 @@
+@use '../utils/' as *;
+
+.projetos {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    place-items: center;
+
+    @include breakpoint('medium') {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  .projeto__item {
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--cl-dk-violet);
+    cursor: pointer;
+    position: relative;
+    transition: .3s ease;
+
+    .item__img {
+      max-width: 300px;
+      height: fit-content;
+    }
+
+    .item__info {
+      padding: 10px;
+      max-width: fit-content;
+      p {
+        font-size: rem(14);
+      }
+    }
+  }
+}
+
+.modal {
+  display: none;
+  width: 85vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--cl-dk-violet);
+  z-index: 1000;
+  padding-block: rem(40);
+  padding-inline: rem(20);
+  cursor: initial;
+  border-radius: 6px;
+  
+  h2 {
+    font-size: rem(24);
+    font-family: var(--ff-Berkshire);
+    padding-inline: rem(30);
+    margin-inline: auto;
+    text-align: center;
+    line-height: rem(36);
+    color: var(--cl-lt-orange);
+    margin-bottom: rem(40);
+  }
+  
+  &__content {
+    display: grid;
+    gap: rem(60);
+
+    @include breakpoint('medium') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: rem(40);
+
+    .info__icons {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: rem(20);
+      
+      li {
+        max-width: 49px;
+        position: relative;
+
+        &:hover {
+          span {
+            display: block;
+          }
+        }
+      }
+
+      span {
+        font-size: rem(12);
+        letter-spacing: 1px;
+        display: none;
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        background: var(--cl-vd-blue);
+        padding: rem(5);
+        border-radius: rem(4);
+      }
+    }
+  }
+
+  &__img {
+    max-width: 500px;
+    justify-self: center;
+  }
+
+  @include breakpoint('medium') {
+    padding: rem(80);
+  }
+
+  @include breakpoint('large') {
+    width: 70vw;
+  }
+
+  .close-modal {
+    max-width: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--cl-vd-blue);
+    padding: rem(10);
+    cursor: pointer;
+    border-radius: 6px;
+  }
+}
