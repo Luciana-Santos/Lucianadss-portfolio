@@ -27,6 +27,7 @@ ul {
 }
 
 body {
+  position: relative;
   min-height: 100vh;
   line-height: 1.5;
   background-color: var(--cl-vd-blue);
@@ -424,6 +425,18 @@ body {
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
   padding-block: 0.625rem;
+}
+
+.btn-topo {
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 /*# sourceMappingURL=styles.css.map */

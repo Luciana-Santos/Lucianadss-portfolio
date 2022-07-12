@@ -1,0 +1,13 @@
+@use '../utils/' as *;
+
+.btn-topo {
+  width: 40px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: rem(12);
+  cursor: pointer;
+  z-index: 1000;
+}
