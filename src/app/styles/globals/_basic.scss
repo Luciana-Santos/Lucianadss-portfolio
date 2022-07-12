@@ -87,5 +87,9 @@ body {
   text-align: center;
   font-family: var(--ff-Berkshire);
   color: var(--cl-lt-orange);
-  margin-bottom: rem(30);
+  margin-bottom: rem(60);
+
+  @include breakpoint('medium') {
+    font-size: rem(66);
+  }
 }
