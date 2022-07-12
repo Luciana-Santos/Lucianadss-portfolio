@@ -1,0 +1,42 @@
+@use '../utils/' as *;
+
+.contato {
+  padding-bottom: rem(60);
+
+  .info__wrapper {
+    display: grid;
+    align-items: center;
+    gap: rem(60);
+
+    @include breakpoint('medium') {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__info {
+
+    ul {
+      display: grid;
+      gap: rem(30);
+      margin-top: rem(40);
+    }
+
+    li {
+    
+      a {
+        display: flex;
+        align-items: center;
+        gap: rem(20);
+
+        img {
+          max-width: 40px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    max-width: 390px;
+    margin-inline: auto;
+  }
+}

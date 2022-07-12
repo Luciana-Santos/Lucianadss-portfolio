@@ -388,4 +388,35 @@ body {
   border-radius: 6px;
 }
 
+.contato {
+  padding-bottom: 3.75rem;
+}
+.contato .info__wrapper {
+  display: grid;
+  align-items: center;
+  gap: 3.75rem;
+}
+@media (min-width: 43.75em) {
+  .contato .info__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.contato__info ul {
+  display: grid;
+  gap: 1.875rem;
+  margin-top: 2.5rem;
+}
+.contato__info li a {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.contato__info li a img {
+  max-width: 40px;
+}
+.contato__img {
+  max-width: 390px;
+  margin-inline: auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
