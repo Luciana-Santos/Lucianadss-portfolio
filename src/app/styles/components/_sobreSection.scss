@@ -49,13 +49,13 @@
           letter-spacing: 1px;
           display: none;
           position: absolute;
-          bottom: -26px;
+          bottom: -40px;
           left: 50%;
           transform: translateX(-50%);
           z-index: 999;
-          background: var(--cl-vd-blue);
-          padding: 5px;
-          border-radius: 4px;
+          background: var(--cl-dk-violet);
+          padding: rem(5);
+          border-radius: rem(4);
         }
         
         ul {

@@ -235,13 +235,13 @@ body {
   letter-spacing: 1px;
   display: none;
   position: absolute;
-  bottom: -26px;
+  bottom: -40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  background: var(--cl-vd-blue);
-  padding: 5px;
-  border-radius: 4px;
+  background: var(--cl-dk-violet);
+  padding: 0.3125rem;
+  border-radius: 0.25rem;
 }
 .sobre__info .links-tecs .tecs ul {
   display: flex;
