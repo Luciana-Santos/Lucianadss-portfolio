@@ -203,7 +203,7 @@ body {
 }
 @media (min-width: 43.75em) {
   .sobre__content {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     justify-content: space-between;
     align-items: center;
   }
