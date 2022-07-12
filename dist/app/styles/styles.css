@@ -389,7 +389,7 @@ body {
 }
 
 .contato {
-  padding-bottom: 3.75rem;
+  padding-bottom: 5rem;
 }
 .contato .info__wrapper {
   display: grid;
@@ -417,6 +417,13 @@ body {
 .contato__img {
   max-width: 390px;
   margin-inline: auto;
+}
+
+.footer {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding-block: 0.625rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
