@@ -301,6 +301,7 @@ body {
 }
 
 .modal {
+  display: none;
   width: 85vw;
   position: fixed;
   top: 50%;
