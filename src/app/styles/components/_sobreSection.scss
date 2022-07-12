@@ -1,0 +1,95 @@
+@use '../utils/' as *;
+
+.sobre {
+  padding-top: rem(60);
+
+  &__content {
+    display: grid;
+    gap: rem(40);
+    
+    @include breakpoint('medium') {
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__info {
+    display: grid;
+    gap: rem(20);
+
+    h3 {
+      font-family: var(--ff-Berkshire);
+      color: var(--cl-md-turquoise);
+      font-size: rem(22);
+      margin-bottom: rem(10);
+    }
+
+    .links-tecs {
+      display: flex;
+      gap: rem(30);
+      margin-top: rem(30);
+
+      .links {
+
+        a {
+          display: inline-block;
+          padding-block: rem(5);
+        }
+
+        ul {
+          display: grid;
+        }
+      }
+
+      .tecs {
+
+        span {
+          font-size: rem(12);
+          letter-spacing: 1px;
+          display: none;
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 999;
+          background: var(--cl-dk-violet);
+          padding: rem(5);
+          border-radius: rem(4);
+        }
+        
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: rem(5);
+        }
+
+        li {
+          max-width: 49px;
+          position: relative;
+
+          &:hover {
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      color: var(--cl-white-body);
+      font-weight: normal;
+
+      &:hover {
+        color: var(--cl-md-turquoise);
+      } 
+    }
+  }
+
+  &__img {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+}
