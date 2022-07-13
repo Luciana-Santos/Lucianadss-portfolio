@@ -66,6 +66,44 @@ function initScrollSuave() {
   });
 }
 
+/***/ }),
+
+/***/ "./src/app/js/modules/voltarTopo.js":
+/*!******************************************!*\
+  !*** ./src/app/js/modules/voltarTopo.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initVoltarTopoBtn)
+/* harmony export */ });
+function initVoltarTopoBtn() {
+  var btnTopo = document.querySelector('[data-topo="btn"]');
+  var sobreSection = document.querySelector('.sobre');
+  var offsetTop = sobreSection.getBoundingClientRect().top;
+
+  var scrollContainer = function scrollContainer() {
+    return document.documentElement || document.body;
+  };
+
+  document.addEventListener('scroll', function () {
+    if (scrollContainer().scrollTop > offsetTop) {
+      btnTopo.style.display = 'block';
+    } else {
+      btnTopo.style.display = 'none';
+    }
+  });
+
+  var gotToTop = function gotToTop() {
+    document.body.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
+  btnTopo.addEventListener('click', gotToTop);
+}
+
 /***/ })
 
 /******/ 	});
@@ -133,10 +171,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_projetoModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/projetoModal */ "./src/app/js/modules/projetoModal.js");
 /* harmony import */ var _modules_scrollsuave__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollsuave */ "./src/app/js/modules/scrollsuave.js");
+/* harmony import */ var _modules_voltarTopo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/voltarTopo */ "./src/app/js/modules/voltarTopo.js");
+
 
 
 (0,_modules_scrollsuave__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_modules_projetoModal__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_modules_voltarTopo__WEBPACK_IMPORTED_MODULE_2__["default"])();
 })();
 
 /******/ })()

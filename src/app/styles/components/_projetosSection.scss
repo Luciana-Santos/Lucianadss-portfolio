@@ -22,6 +22,7 @@
     background: var(--cl-dk-violet);
     position: relative;
     transition: .3s ease;
+    max-width: 300px;
 
     .item__img {
       max-width: 300px;
