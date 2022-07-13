@@ -91,6 +91,10 @@ body {
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .container {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
@@ -278,7 +282,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 43.75em) {
   .projetos__wrapper {
@@ -290,7 +295,6 @@ body {
   border-radius: 6px;
   overflow: hidden;
   background: var(--cl-dk-violet);
-  cursor: pointer;
   position: relative;
   transition: 0.3s ease;
 }
@@ -300,6 +304,7 @@ body {
 }
 .projetos .projeto__item .item__info {
   padding: 10px;
+  cursor: pointer;
   max-width: fit-content;
 }
 .projetos .projeto__item .item__info p {
@@ -309,6 +314,8 @@ body {
 .modal {
   display: none;
   width: 85vw;
+  height: 100vh;
+  overflow-y: scroll;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -386,12 +393,16 @@ body {
 .modal .close-modal {
   max-width: 40px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   background: var(--cl-vd-blue);
   padding: 0.625rem;
   cursor: pointer;
   border-radius: 6px;
+  z-index: 99999;
+}
+.modal.ativo {
+  display: block;
 }
 
 .contato {

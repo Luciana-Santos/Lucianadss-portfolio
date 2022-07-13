@@ -2,6 +2,41 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/app/js/modules/projetoModal.js":
+/*!********************************************!*\
+  !*** ./src/app/js/modules/projetoModal.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ initProjetoModal)
+/* harmony export */ });
+function initProjetoModal() {
+  var projeto = document.querySelector('[data-projeto="content"]');
+  var modal = document.querySelector('[data-projeto="modal"]');
+  var body = document.querySelector('body');
+  var btnFechar = document.querySelector('[data-modal="fechar"]');
+  var ativo = 'ativo';
+  var noScroll = 'no-scroll';
+
+  function abrirModal(e) {
+    e.preventDefault();
+    modal.classList.add(ativo);
+    body.classList.add(noScroll);
+  }
+
+  function fecharModal() {
+    modal.classList.remove(ativo);
+    body.classList.remove('no-scroll');
+  }
+
+  projeto.addEventListener('click', abrirModal);
+  btnFechar.addEventListener('click', fecharModal);
+}
+
+/***/ }),
+
 /***/ "./src/app/js/modules/scrollsuave.js":
 /*!*******************************************!*\
   !*** ./src/app/js/modules/scrollsuave.js ***!
@@ -96,9 +131,12 @@ var __webpack_exports__ = {};
   !*** ./src/app/js/index.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_scrollsuave__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollsuave */ "./src/app/js/modules/scrollsuave.js");
+/* harmony import */ var _modules_projetoModal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/projetoModal */ "./src/app/js/modules/projetoModal.js");
+/* harmony import */ var _modules_scrollsuave__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollsuave */ "./src/app/js/modules/scrollsuave.js");
 
-(0,_modules_scrollsuave__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+(0,_modules_scrollsuave__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_modules_projetoModal__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
 
 /******/ })()
