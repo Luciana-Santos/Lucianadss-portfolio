@@ -1,6 +1,7 @@
 @use '../utils/' as *;
 
 .sobre {
+  min-height: 100vh;
   padding-top: rem(60);
 
   &__content {

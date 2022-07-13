@@ -1,6 +1,7 @@
 @use '../utils/' as *;
 
 .projetos {
+  min-height: 100vh;
 
   &__wrapper {
     display: flex;
