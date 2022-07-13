@@ -2,18 +2,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/app/js/modules/helloWorld.js":
-/*!******************************************!*\
-  !*** ./src/app/js/modules/helloWorld.js ***!
-  \******************************************/
+/***/ "./src/app/js/modules/scrollsuave.js":
+/*!*******************************************!*\
+  !*** ./src/app/js/modules/scrollsuave.js ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ helloWorld)
+/* harmony export */   "default": () => (/* binding */ initScrollSuave)
 /* harmony export */ });
-function helloWorld() {
-  console.log('Hello, world!');
+function initScrollSuave() {
+  var linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
+
+  function scrollToSection(e) {
+    e.preventDefault();
+    var href = this.getAttribute('href');
+    var section = document.querySelector(href);
+    var sectionTop = section.offsetTop;
+    window.scrollTo({
+      top: sectionTop,
+      behavior: 'smooth'
+    });
+  }
+
+  linksInternos.forEach(function (link) {
+    link.addEventListener('click', scrollToSection);
+  });
 }
 
 /***/ })
@@ -81,9 +96,9 @@ var __webpack_exports__ = {};
   !*** ./src/app/js/index.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_helloWorld__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/helloWorld */ "./src/app/js/modules/helloWorld.js");
+/* harmony import */ var _modules_scrollsuave__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollsuave */ "./src/app/js/modules/scrollsuave.js");
 
-(0,_modules_helloWorld__WEBPACK_IMPORTED_MODULE_0__["default"])();
+(0,_modules_scrollsuave__WEBPACK_IMPORTED_MODULE_0__["default"])();
 })();
 
 /******/ })()

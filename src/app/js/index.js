@@ -1,3 +1,3 @@
-import helloWorld from './modules/helloWorld';
+import initScrollSuave from './modules/scrollsuave';
 
-helloWorld();
+initScrollSuave();

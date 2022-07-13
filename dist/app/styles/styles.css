@@ -57,6 +57,7 @@ body {
   letter-spacing: 0.09375rem;
   font-weight: bold;
   transition: 0.3s ease;
+  font-style: normal;
 }
 
 .btn--yellow {
@@ -196,6 +197,7 @@ body {
 }
 
 .sobre {
+  min-height: 100vh;
   padding-top: 3.75rem;
 }
 .sobre__content {
@@ -269,6 +271,9 @@ body {
   margin-inline: auto;
 }
 
+.projetos {
+  min-height: 100vh;
+}
 .projetos__wrapper {
   display: flex;
   flex-direction: column;
@@ -391,6 +396,7 @@ body {
 
 .contato {
   padding-bottom: 5rem;
+  min-height: 100vh;
 }
 .contato .info__wrapper {
   display: grid;
