@@ -423,19 +423,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _projetoModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projetoModal */ "./src/app/js/modules/projetoModal.js");
+
 
 
 function initFetchProjetos() {
-  function createProjeto(_ref) {
-    var titulo = _ref.titulo,
-        imagem = _ref.imagem,
-        descricao = _ref.descricao,
-        tecnologies = _ref.tecnologies,
-        links = _ref.links;
+  function createProjeto(projeto) {
+    var titulo = projeto.titulo,
+        descricao = projeto.descricao,
+        imagem = projeto.imagem,
+        _projeto$links = projeto.links,
+        live = _projeto$links.live,
+        code = _projeto$links.code,
+        tecnologies = projeto.tecnologies;
     var div = document.createElement('div');
-    div.dataset.projeto = 'content';
     div.classList.add('projeto__container');
-    div.innerHTML = "\n        <div class=\"projeto__item\">\n          <div class=\"item__img\">\n            <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n          </div>\n          <div class=\"item__info\">\n            <p>").concat(titulo, "</p>\n          </div>\n        </div>\n\n        <div class=\"modal\" data-projeto=\"modal\">\n          <h2>").concat(titulo, "</h2>\n\n          <div class=\"modal__content\">\n            <div class=\"modal__info\">\n              <p>").concat(descricao, "</p>\n\n              <ul class=\"info__icons\">\n                <li><img src=\"").concat(tecnologies.css.icon, "\" alt=\"").concat(tecnologies.css.label, "\"><span>").concat(tecnologies.css.label, "</span></li>\n                <li><img src=\"./assets/img/javascript-icon.png\" alt=\"\"><span>JavaScript</span></li>\n                <li><img src=\"./assets/img/react-icon.png\" alt=\"\"><span>React.js</span></li>\n              </ul>\n\n              <ul class=\"modal__links\">\n                <li><a href=\"#\">Live</a></li>\n                <li><a href=\"#\">GitHub</a></li>\n              </ul>\n            </div>\n\n            <div class=\"modal__img\">\n              <img src=\"./assets/img/projeto-teste.png\" alt=\"\">\n            </div>\n          </div>\n\n          <div data-modal=\"fechar\" class=\"close-modal\">\n            <img src=\"./assets/img/close-icon.svg\" alt=\"\">\n          </div>\n        </div>\n    ");
+    div.innerHTML = "\n        <div class=\"projeto__item\" data-projeto=\"content\">\n          <div class=\"item__img\">\n            <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n          </div>\n          <div class=\"item__info\">\n            <p>").concat(titulo, "</p>\n          </div>\n        </div>\n\n        <div class=\"modal\" data-projeto=\"modal\">\n          <h2>").concat(titulo, "</h2>\n\n          <div class=\"modal__content\">\n            <div class=\"modal__info\">\n              <p>").concat(descricao, "</p>\n\n              <ul class=\"info__icons\">\n                ").concat(tecnologies.map(function (item) {
+      return "<li><img src=\"".concat(item.icon, "\" alt=\"\"><span>").concat(item.label, "</span></li>");
+    }).join(''), "\n              </ul>\n\n              <ul class=\"modal__links\">\n                <li><a href=\"").concat(live, "\">Live</a></li>\n                <li><a href=\"").concat(code, "\">GitHub</a></li>\n              </ul>\n            </div>\n\n            <div class=\"modal__img\">\n              <img src=\"").concat(imagem, "\" alt=\"").concat(titulo, "\">\n            </div>\n          </div>\n\n          <div data-modal=\"fechar\" class=\"close-modal\">\n            <img src=\"./assets/img/close-icon.svg\" alt=\"\">\n          </div>\n        </div>\n    ");
     return div;
   }
 
@@ -465,8 +470,9 @@ function initFetchProjetos() {
                 var divProjeto = createProjeto(projeto);
                 projetosContainer.appendChild(divProjeto);
               });
+              (0,_projetoModal__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
-            case 8:
+            case 9:
             case "end":
               return _context.stop();
           }
@@ -493,25 +499,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ initProjetoModal)
 /* harmony export */ });
 function initProjetoModal() {
-  var projetos = document.querySelector('[data-projeto="content"]');
-  var modal = document.querySelector('[data-projeto="modal"]');
+  var projetos = document.querySelectorAll('[data-projeto="content"]');
+  var modal = document.querySelectorAll('[data-projeto="modal"]');
   var body = document.querySelector('body');
   var btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   var ativo = 'ativo';
   var noScroll = 'no-scroll';
 
-  function abrirModal(e) {
-    e.preventDefault();
-    modal.classList.add(ativo);
-    body.classList.add(noScroll);
+  if (projetos.length && modal.length) {
+    var abrirModal = function abrirModal(index) {
+      fecharModal();
+      body.classList.add(noScroll);
+      modal[index].classList.add(ativo);
+    };
+
+    projetos.forEach(function (projeto, index) {
+      projeto.addEventListener('click', function () {
+        return abrirModal(index);
+      });
+    });
   }
 
   function fecharModal() {
-    modal.classList.remove(ativo);
-    body.classList.remove('no-scroll');
+    modal.forEach(function (itemModal) {
+      itemModal.classList.remove(ativo);
+    });
+    body.classList.remove(noScroll);
   }
 
-  console.log(projetos);
+  btnFechar.forEach(function (btn) {
+    btn.addEventListener('click', fecharModal);
+  });
 }
 
 /***/ }),
@@ -713,17 +731,14 @@ var __webpack_exports__ = {};
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_fetchProjetos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/fetchProjetos */ "./src/app/js/modules/fetchProjetos.js");
-/* harmony import */ var _modules_projetoModal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/projetoModal */ "./src/app/js/modules/projetoModal.js");
-/* harmony import */ var _modules_scrollsuave__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrollsuave */ "./src/app/js/modules/scrollsuave.js");
-/* harmony import */ var _modules_voltarTopo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/voltarTopo */ "./src/app/js/modules/voltarTopo.js");
+/* harmony import */ var _modules_scrollsuave__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollsuave */ "./src/app/js/modules/scrollsuave.js");
+/* harmony import */ var _modules_voltarTopo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/voltarTopo */ "./src/app/js/modules/voltarTopo.js");
 
 
 
-
-(0,_modules_scrollsuave__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_modules_scrollsuave__WEBPACK_IMPORTED_MODULE_1__["default"])();
 (0,_modules_fetchProjetos__WEBPACK_IMPORTED_MODULE_0__["default"])();
-(0,_modules_voltarTopo__WEBPACK_IMPORTED_MODULE_3__["default"])();
-(0,_modules_projetoModal__WEBPACK_IMPORTED_MODULE_1__["default"])();
+(0,_modules_voltarTopo__WEBPACK_IMPORTED_MODULE_2__["default"])();
 })();
 
 /******/ })()

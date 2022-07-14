@@ -4,16 +4,16 @@
   min-height: 100vh;
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: rem(20);
-    justify-content: center;
-    align-items: center;
+    max-width: fit-content;
+    margin-inline: auto;
 
     @include breakpoint('medium') {
-      flex-direction: row;
-      flex-wrap: wrap;
+      column-count: 3;
     }
+  }
+
+  .projeto__container {
+    margin-bottom: rem(20);
   }
 
   .projeto__item {

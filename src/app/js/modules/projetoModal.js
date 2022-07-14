@@ -1,21 +1,30 @@
 export default function initProjetoModal() {
-  const projetos = document.querySelector('[data-projeto="content"]');
-  const modal = document.querySelector('[data-projeto="modal"]');
+  const projetos = document.querySelectorAll('[data-projeto="content"]');
+  const modal = document.querySelectorAll('[data-projeto="modal"]');
   const body = document.querySelector('body');
   const btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   const ativo = 'ativo';
   const noScroll = 'no-scroll';
 
-  function abrirModal(e) {
-    e.preventDefault();
-    modal.classList.add(ativo);
-    body.classList.add(noScroll);
+  if (projetos.length && modal.length) {
+    function abrirModal(index) {
+      fecharModal();
+      body.classList.add(noScroll);
+      modal[index].classList.add(ativo);
+    }
+    projetos.forEach((projeto, index) => {
+      projeto.addEventListener('click', () => abrirModal(index));
+    });
   }
 
   function fecharModal() {
-    modal.classList.remove(ativo);
-    body.classList.remove('no-scroll');
+    modal.forEach((itemModal) => {
+      itemModal.classList.remove(ativo);
+    });
+    body.classList.remove(noScroll);
   }
 
-  console.log(projetos);
+  btnFechar.forEach((btn) => {
+    btn.addEventListener('click', fecharModal);
+  });
 }

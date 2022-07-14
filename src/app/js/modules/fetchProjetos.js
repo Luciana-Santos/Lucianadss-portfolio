@@ -1,11 +1,19 @@
+import initProjetoModal from './projetoModal';
+
 export default function initFetchProjetos() {
-  function createProjeto({ titulo, imagem, descricao, tecnologies, links }) {
+  function createProjeto(projeto) {
+    const {
+      titulo,
+      descricao,
+      imagem,
+      links: { live, code },
+      tecnologies,
+    } = projeto;
     const div = document.createElement('div');
-    div.dataset.projeto = 'content';
     div.classList.add('projeto__container');
 
     div.innerHTML = `
-        <div class="projeto__item">
+        <div class="projeto__item" data-projeto="content">
           <div class="item__img">
             <img src="${imagem}" alt="${titulo}">
           </div>
@@ -22,19 +30,22 @@ export default function initFetchProjetos() {
               <p>${descricao}</p>
 
               <ul class="info__icons">
-                <li><img src="${tecnologies.css.icon}" alt="${tecnologies.css.label}"><span>${tecnologies.css.label}</span></li>
-                <li><img src="./assets/img/javascript-icon.png" alt=""><span>JavaScript</span></li>
-                <li><img src="./assets/img/react-icon.png" alt=""><span>React.js</span></li>
+                ${tecnologies
+                  .map(
+                    (item) =>
+                      `<li><img src="${item.icon}" alt=""><span>${item.label}</span></li>`,
+                  )
+                  .join('')}
               </ul>
 
               <ul class="modal__links">
-                <li><a href="#">Live</a></li>
-                <li><a href="#">GitHub</a></li>
+                <li><a href="${live}">Live</a></li>
+                <li><a href="${code}">GitHub</a></li>
               </ul>
             </div>
 
             <div class="modal__img">
-              <img src="./assets/img/projeto-teste.png" alt="">
+              <img src="${imagem}" alt="${titulo}">
             </div>
           </div>
 
@@ -58,6 +69,7 @@ export default function initFetchProjetos() {
       const divProjeto = createProjeto(projeto);
       projetosContainer.appendChild(divProjeto);
     });
+    initProjetoModal();
   }
 
   fetchprojetos('../../projetos.json');
