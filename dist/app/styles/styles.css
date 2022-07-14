@@ -298,6 +298,7 @@ body {
   position: relative;
   transition: 0.3s ease;
   max-width: 300px;
+  cursor: pointer;
 }
 .projetos .projeto__item .item__img {
   max-width: 300px;
@@ -305,7 +306,6 @@ body {
 }
 .projetos .projeto__item .item__info {
   padding: 10px;
-  cursor: pointer;
   max-width: fit-content;
 }
 .projetos .projeto__item .item__info p {

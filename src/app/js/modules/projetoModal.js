@@ -1,8 +1,8 @@
 export default function initProjetoModal() {
-  const projeto = document.querySelector('[data-projeto="content"]');
+  const projetos = document.querySelector('[data-projeto="content"]');
   const modal = document.querySelector('[data-projeto="modal"]');
   const body = document.querySelector('body');
-  const btnFechar = document.querySelector('[data-modal="fechar"]');
+  const btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   const ativo = 'ativo';
   const noScroll = 'no-scroll';
 
@@ -17,6 +17,5 @@ export default function initProjetoModal() {
     body.classList.remove('no-scroll');
   }
 
-  projeto.addEventListener('click', abrirModal);
-  btnFechar.addEventListener('click', fecharModal);
+  console.log(projetos);
 }
