@@ -1,7 +1,7 @@
-import initProjetoModal from './modules/projetoModal';
+import initFetchProjetos from './modules/fetchProjetos';
 import initScrollSuave from './modules/scrollsuave';
 import initVoltarTopoBtn from './modules/voltarTopo';
 
 initScrollSuave();
-initProjetoModal();
+initFetchProjetos();
 initVoltarTopoBtn();
