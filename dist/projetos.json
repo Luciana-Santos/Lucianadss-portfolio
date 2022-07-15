@@ -1,0 +1,71 @@
+[
+  {
+    "titulo": "Dogs - Projeto final de React.",
+    "descricao": "endrils of gossamer clouds hydrogen atoms emerged into consciousness the sky calls to us something incredible is waiting to be known corpus callosum. The ash of stellar alchemy concept of the number one hearts of the stars a still more glorious dawn awaits Drake Equation invent the universe. ",
+    "tecnologies": [
+      {
+        "label": "CSS",
+        "icon": "./assets/img/html-icon.png"
+      },
+      {
+        "label": "JavaScript",
+        "icon": "./assets/img/javascript-icon.png"
+      },
+      {
+        "label": "React.js",
+        "icon": "./assets/img/react-icon.png"
+      }
+    ],
+    "links": {
+      "live": "https://github.com/Luciana-Santos",
+      "code": "https://github.com/Luciana-Santos"
+    },
+    "imagem": "./assets/img/projeto-teste.png"
+  },
+  {
+    "titulo": "Sistema Solar - Projeto final de JavaScript.",
+    "descricao": "Descended from astronomers another world Sea of Tranquility great turbulent clouds extraordinary claims require extraordinary evidence rings of Uranus.",
+    "tecnologies": [
+      {
+        "label": "HTML",
+        "icon": "./assets/img/html-icon.png"
+      },
+      {
+        "label": "SASS",
+        "icon": "./assets/img/sass-icon.png"
+      },
+      {
+        "label": "JavaScript",
+        "icon": "./assets/img/javascript-icon.png"
+      }
+    ],
+    "links": {
+      "live": "https://github.com/Luciana-Santos",
+      "code": "https://github.com/Luciana-Santos"
+    },
+    "imagem": "./assets/img/projeto-teste.png"
+  },
+  {
+    "titulo": "Luciana Santos - Portfólio",
+    "descricao": "With pretty stories for which there's little good evidence extraordinary claims require extraordinary evidence a mote of dust suspended in a sunbeam citizens of distant epochs encyclopaedia galactica the ash of stellar alchemy. ",
+    "tecnologies": [
+      {
+        "label": "HTML",
+        "icon": "./assets/img/html-icon.png"
+      },
+      {
+        "label": "SASS",
+        "icon": "./assets/img/sass-icon.png"
+      },
+      {
+        "label": "JavaScript",
+        "icon": "./assets/img/javascript-icon.png"
+      }
+    ],
+    "links": {
+      "live": "https://github.com/Luciana-Santos",
+      "code": "https://github.com/Luciana-Santos"
+    },
+    "imagem": "./assets/img/projeto-teste.png"
+  }
+]
