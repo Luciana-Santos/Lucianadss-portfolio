@@ -14,7 +14,7 @@ export default function initVoltarTopoBtn() {
   });
 
   const gotToTop = () => {
-    document.body.scrollIntoView({ behavior: 'smooth' });
+    document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   btnTopo.addEventListener('click', gotToTop);

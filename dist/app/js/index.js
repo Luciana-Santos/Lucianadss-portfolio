@@ -596,7 +596,8 @@ function initVoltarTopoBtn() {
 
   var gotToTop = function gotToTop() {
     document.body.scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: 'start'
     });
   };
 
