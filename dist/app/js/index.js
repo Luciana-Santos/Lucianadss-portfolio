@@ -532,12 +532,10 @@ function initProjetoModal() {
   var body = document.querySelector('body');
   var btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   var ativo = 'ativo';
-  var noScroll = 'no-scroll';
 
   if (projetos.length && modal.length) {
     var abrirModal = function abrirModal(index) {
       fecharModal();
-      body.classList.add(noScroll);
       modal[index].classList.add(ativo);
     };
 
@@ -552,7 +550,6 @@ function initProjetoModal() {
     modal.forEach(function (itemModal) {
       itemModal.classList.remove(ativo);
     });
-    body.classList.remove(noScroll);
   }
 
   btnFechar.forEach(function (btn) {
@@ -587,7 +584,7 @@ var ScrollAnima = /*#__PURE__*/function () {
     (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ScrollAnima);
 
     this.sections = document.querySelectorAll(sections);
-    this.windowMetade = window.innerHeight * 0.6;
+    this.windowMetade = window.innerHeight * 0.5;
     this.checkDistance = (0,_debounce__WEBPACK_IMPORTED_MODULE_3__["default"])(this.checkDistance.bind(this), 50);
   } // pega a distancia de cada item em relação
   // ao topo do site
