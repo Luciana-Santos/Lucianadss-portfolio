@@ -95,6 +95,17 @@ body {
   overflow: hidden;
 }
 
+[data-anime=scroll] {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+  transition: 0.3s;
+}
+
+[data-anime=scroll].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 .container {
   width: min(100% - 2rem, 60rem);
   margin-inline: auto;
