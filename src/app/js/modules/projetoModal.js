@@ -1,7 +1,6 @@
 export default function initProjetoModal() {
   const projetos = document.querySelectorAll('[data-projeto="content"]');
   const modal = document.querySelectorAll('[data-projeto="modal"]');
-  const body = document.querySelector('body');
   const btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   const ativo = 'ativo';
 

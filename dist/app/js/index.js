@@ -529,7 +529,6 @@ __webpack_require__.r(__webpack_exports__);
 function initProjetoModal() {
   var projetos = document.querySelectorAll('[data-projeto="content"]');
   var modal = document.querySelectorAll('[data-projeto="modal"]');
-  var body = document.querySelector('body');
   var btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   var ativo = 'ativo';
 
