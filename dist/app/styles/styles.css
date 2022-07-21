@@ -58,6 +58,8 @@ body {
   font-weight: bold;
   transition: 0.3s ease;
   font-style: normal;
+  display: grid;
+  place-items: center;
 }
 
 .btn--yellow {
