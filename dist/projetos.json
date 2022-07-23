@@ -1,26 +1,18 @@
 [
   {
-    "titulo": "Dogs - Projeto final de React.",
-    "links": {
-      "live": "https://github.com/Luciana-Santos",
-      "code": "https://github.com/Luciana-Santos"
-    },
-    "imagem": "./assets/img/projeto-teste.png"
-  },
-  {
     "titulo": "Sistema Solar - Projeto final de JavaScript.",
     "links": {
-      "live": "https://github.com/Luciana-Santos",
-      "code": "https://github.com/Luciana-Santos"
+      "live": "https://sistema-solar-luciana.netlify.app/",
+      "code": "https://github.com/Luciana-Santos/sistema_solar"
     },
-    "imagem": "./assets/img/projeto-teste.png"
+    "imagem": "./assets/img/sistema_solar-preview.jpg"
   },
   {
-    "titulo": "Luciana Santos - Portfólio",
+    "titulo": "Luciana Santos - Portfólio.",
     "links": {
-      "live": "https://github.com/Luciana-Santos",
-      "code": "https://github.com/Luciana-Santos"
+      "live": "https://lucianadss.netlify.app/",
+      "code": "https://github.com/Luciana-Santos/Lucianadss-portfolio"
     },
-    "imagem": "./assets/img/projeto-teste.png"
+    "imagem": "./assets/img/portfolio-preview.jpg"
   }
 ]
