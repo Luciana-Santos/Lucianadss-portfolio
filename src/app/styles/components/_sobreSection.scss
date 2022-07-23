@@ -21,7 +21,7 @@
 
     h3 {
       font-family: var(--ff-Berkshire);
-      color: var(--cl-md-turquoise);
+      color: var(--white-body);
       font-size: rem(22);
       margin-bottom: rem(10);
     }
@@ -70,22 +70,13 @@
           max-width: 49px;
           position: relative;
 
-          &:hover {
+          &:hover, &:active {
             span {
               display: block;
             }
           }
         }
       }
-    }
-
-    a {
-      color: var(--cl-white-body);
-      font-weight: normal;
-
-      &:hover {
-        color: var(--cl-md-turquoise);
-      } 
     }
   }
 
