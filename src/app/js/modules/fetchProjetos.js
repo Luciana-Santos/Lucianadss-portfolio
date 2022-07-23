@@ -22,7 +22,7 @@ export default function initFetchProjetos() {
           </div>
         </div>
 
-        <div class="modal" data-projeto="modal">
+        <div class="modal" data-modal="container">
           <h2>${titulo}</h2>
 
           <div class="modal__content">

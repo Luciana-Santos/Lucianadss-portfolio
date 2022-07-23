@@ -327,7 +327,7 @@ body {
 .modal {
   display: none;
   width: 85vw;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: fixed;
   top: 50%;
   left: 50%;

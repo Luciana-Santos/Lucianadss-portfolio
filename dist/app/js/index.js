@@ -466,7 +466,7 @@ function initFetchProjetos() {
         tecnologies = projeto.tecnologies;
     var div = document.createElement('div');
     div.classList.add('projeto__container');
-    div.innerHTML = "\n        <div class=\"projeto__item\" data-projeto=\"content\">\n          <div class=\"item__img\">\n            <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n          </div>\n          <div class=\"item__info\">\n            <p>").concat(titulo, "</p>\n          </div>\n        </div>\n\n        <div class=\"modal\" data-projeto=\"modal\">\n          <h2>").concat(titulo, "</h2>\n\n          <div class=\"modal__content\">\n            <div class=\"modal__info\">\n              <p>").concat(descricao, "</p>\n\n              <ul class=\"info__icons\">\n                ").concat(tecnologies.map(function (item) {
+    div.innerHTML = "\n        <div class=\"projeto__item\" data-projeto=\"content\">\n          <div class=\"item__img\">\n            <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n          </div>\n          <div class=\"item__info\">\n            <p>").concat(titulo, "</p>\n          </div>\n        </div>\n\n        <div class=\"modal\" data-modal=\"container\">\n          <h2>").concat(titulo, "</h2>\n\n          <div class=\"modal__content\">\n            <div class=\"modal__info\">\n              <p>").concat(descricao, "</p>\n\n              <ul class=\"info__icons\">\n                ").concat(tecnologies.map(function (item) {
       return "<li><img src=\"".concat(item.icon, "\" alt=\"\"><span>").concat(item.label, "</span></li>");
     }).join(''), "\n              </ul>\n\n              <ul class=\"modal__links\">\n                <li><a href=\"").concat(live, "\">Live</a></li>\n                <li><a href=\"").concat(code, "\">GitHub</a></li>\n              </ul>\n            </div>\n\n            <div class=\"modal__img\">\n              <img src=\"").concat(imagem, "\" alt=\"").concat(titulo, "\">\n            </div>\n          </div>\n\n          <div data-modal=\"fechar\" class=\"close-modal\">\n            <img src=\"./assets/img/close-icon.svg\" alt=\"\">\n          </div>\n        </div>\n    ");
     return div;
@@ -528,22 +528,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function initProjetoModal() {
   var projetos = document.querySelectorAll('[data-projeto="content"]');
-  var modal = document.querySelectorAll('[data-projeto="modal"]');
+  var modal = document.querySelectorAll('[data-modal="container"]');
   var btnFechar = document.querySelectorAll('[data-modal="fechar"]');
   var ativo = 'ativo';
-
-  if (projetos.length && modal.length) {
-    var abrirModal = function abrirModal(index) {
-      fecharModal();
-      modal[index].classList.add(ativo);
-    };
-
-    projetos.forEach(function (projeto, index) {
-      projeto.addEventListener('click', function () {
-        return abrirModal(index);
-      });
-    });
-  }
 
   function fecharModal() {
     modal.forEach(function (itemModal) {
@@ -551,8 +538,26 @@ function initProjetoModal() {
     });
   }
 
+  function abrirModal(index) {
+    fecharModal();
+    modal[index].classList.add(ativo);
+  }
+
+  if (projetos.length && modal.length) {
+    projetos.forEach(function (projeto, index) {
+      projeto.addEventListener('click', function () {
+        return abrirModal(index);
+      });
+    });
+  }
+
   btnFechar.forEach(function (btn) {
     btn.addEventListener('click', fecharModal);
+  });
+  window.addEventListener('click', function (e) {
+    if (!e.target.classList.contains('projeto__container')) {
+      console.log('não tem modal');
+    }
   });
 }
 
@@ -583,7 +588,7 @@ var ScrollAnima = /*#__PURE__*/function () {
     (0,_babel_runtime_helpers_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ScrollAnima);
 
     this.sections = document.querySelectorAll(sections);
-    this.windowMetade = window.innerHeight * 0.5;
+    this.windowMetade = window.innerHeight * 0.6;
     this.checkDistance = (0,_debounce__WEBPACK_IMPORTED_MODULE_3__["default"])(this.checkDistance.bind(this), 50);
   } // pega a distancia de cada item em relação
   // ao topo do site
