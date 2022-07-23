@@ -462,7 +462,7 @@ function initFetchProjetos() {
         code = _projeto$links.code;
     var div = document.createElement('div');
     div.classList.add('projeto__container');
-    div.innerHTML = "\n      <!-- projeto -->\n      <div class=\"projeto__item\" data-projeto=\"content\">\n        <div class=\"item__img\">\n          <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n        </div>\n        <div class=\"item__info\">\n          <p>").concat(titulo, "</p>\n\n          <ul>\n            <li><a href=\"").concat(code, "\">GitHub</a></li>\n            <li><a href=\"").concat(live, "\">Live</a></li>\n          </ul>\n        </div>\n      </div>\n      <!-- fim projeto -->\n    ");
+    div.innerHTML = "\n      <!-- projeto -->\n      <div class=\"projeto__item\" data-projeto=\"content\">\n        <div class=\"item__img\">\n          <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n        </div>\n        <div class=\"item__info\">\n          <p>").concat(titulo, "</p>\n\n          <ul>\n            <li><a href=\"").concat(code, "\" target=\u201D_blank\u201D>GitHub</a></li>\n            <li><a href=\"").concat(live, "\" target=\u201D_blank\u201D>Live</a></li>\n          </ul>\n        </div>\n      </div>\n      <!-- fim projeto -->\n    ");
     return div;
   }
 

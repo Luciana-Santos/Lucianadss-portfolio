@@ -18,8 +18,8 @@ export default function initFetchProjetos() {
           <p>${titulo}</p>
 
           <ul>
-            <li><a href="${code}">GitHub</a></li>
-            <li><a href="${live}">Live</a></li>
+            <li><a href="${code}" target=”_blank”>GitHub</a></li>
+            <li><a href="${live}" target=”_blank”>Live</a></li>
           </ul>
         </div>
       </div>
