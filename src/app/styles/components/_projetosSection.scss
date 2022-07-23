@@ -8,7 +8,7 @@
     margin-inline: auto;
 
     @include breakpoint('medium') {
-      column-count: 3;
+      column-count: 2;
     }
   }
 
