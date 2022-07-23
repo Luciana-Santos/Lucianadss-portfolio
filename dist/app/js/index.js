@@ -451,24 +451,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _projetoModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projetoModal */ "./src/app/js/modules/projetoModal.js");
-
 
 
 function initFetchProjetos() {
   function createProjeto(projeto) {
     var titulo = projeto.titulo,
-        descricao = projeto.descricao,
         imagem = projeto.imagem,
         _projeto$links = projeto.links,
         live = _projeto$links.live,
-        code = _projeto$links.code,
-        tecnologies = projeto.tecnologies;
+        code = _projeto$links.code;
     var div = document.createElement('div');
     div.classList.add('projeto__container');
-    div.innerHTML = "\n        <div class=\"projeto__item\" data-projeto=\"content\">\n          <div class=\"item__img\">\n            <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n          </div>\n          <div class=\"item__info\">\n            <p>").concat(titulo, "</p>\n          </div>\n        </div>\n\n        <div class=\"modal\" data-modal=\"container\">\n          <h2>").concat(titulo, "</h2>\n\n          <div class=\"modal__content\">\n            <div class=\"modal__info\">\n              <p>").concat(descricao, "</p>\n\n              <ul class=\"info__icons\">\n                ").concat(tecnologies.map(function (item) {
-      return "<li><img src=\"".concat(item.icon, "\" alt=\"\"><span>").concat(item.label, "</span></li>");
-    }).join(''), "\n              </ul>\n\n              <ul class=\"modal__links\">\n                <li><a href=\"").concat(live, "\">Live</a></li>\n                <li><a href=\"").concat(code, "\">GitHub</a></li>\n              </ul>\n            </div>\n\n            <div class=\"modal__img\">\n              <img src=\"").concat(imagem, "\" alt=\"").concat(titulo, "\">\n            </div>\n          </div>\n\n          <div data-modal=\"fechar\" class=\"close-modal\">\n            <img src=\"./assets/img/close-icon.svg\" alt=\"\">\n          </div>\n        </div>\n    ");
+    div.innerHTML = "\n      <!-- projeto -->\n      <div class=\"projeto__item\" data-projeto=\"content\">\n        <div class=\"item__img\">\n          <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n        </div>\n        <div class=\"item__info\">\n          <p>").concat(titulo, "</p>\n\n          <ul>\n            <li><a href=\"").concat(code, "\">GitHub</a></li>\n            <li><a href=\"").concat(live, "\">Live</a></li>\n          </ul>\n        </div>\n      </div>\n      <!-- fim projeto -->\n    ");
     return div;
   }
 
@@ -498,9 +492,8 @@ function initFetchProjetos() {
                 var divProjeto = createProjeto(projeto);
                 projetosContainer.appendChild(divProjeto);
               });
-              (0,_projetoModal__WEBPACK_IMPORTED_MODULE_2__["default"])();
 
-            case 9:
+            case 8:
             case "end":
               return _context.stop();
           }
@@ -511,54 +504,6 @@ function initFetchProjetos() {
   }
 
   fetchprojetos('../../projetos.json');
-}
-
-/***/ }),
-
-/***/ "./src/app/js/modules/projetoModal.js":
-/*!********************************************!*\
-  !*** ./src/app/js/modules/projetoModal.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ initProjetoModal)
-/* harmony export */ });
-function initProjetoModal() {
-  var projetos = document.querySelectorAll('[data-projeto="content"]');
-  var modal = document.querySelectorAll('[data-modal="container"]');
-  var btnFechar = document.querySelectorAll('[data-modal="fechar"]');
-  var ativo = 'ativo';
-
-  function fecharModal() {
-    modal.forEach(function (itemModal) {
-      itemModal.classList.remove(ativo);
-    });
-  }
-
-  function abrirModal(index) {
-    fecharModal();
-    modal[index].classList.add(ativo);
-  }
-
-  if (projetos.length && modal.length) {
-    projetos.forEach(function (projeto, index) {
-      projeto.addEventListener('click', function () {
-        return abrirModal(index);
-      });
-    });
-  }
-
-  btnFechar.forEach(function (btn) {
-    btn.addEventListener('click', fecharModal);
-  });
-  window.addEventListener('click', function (e) {
-    if (!e.target.classList.contains('projeto__container')) {
-      console.log('não tem modal');
-    }
-  });
 }
 
 /***/ }),

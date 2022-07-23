@@ -12,10 +12,6 @@
     }
   }
 
-  .projeto__container {
-    margin-bottom: rem(20);
-  }
-
   .projeto__item {
     border-radius: 6px;
     overflow: hidden;
@@ -23,7 +19,8 @@
     position: relative;
     transition: .3s ease;
     max-width: 300px;
-    cursor: pointer;
+    margin-bottom: rem(20);
+    position: relative;
 
     .item__img {
       max-width: 300px;
@@ -33,9 +30,16 @@
     .item__info {
       padding: 10px;
       max-width: fit-content;
+      display: grid;
+      gap: rem(16);
 
       p {
         font-size: rem(14);
+      }
+
+      ul {
+        display: flex;
+        gap: rem(20);
       }
     }
   }

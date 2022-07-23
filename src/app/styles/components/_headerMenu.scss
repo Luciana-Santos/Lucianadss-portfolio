@@ -11,7 +11,8 @@
 
   &__menu {
     display: flex;
-    gap: rem(30);
+    row-gap: 10px;
+    column-gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 
