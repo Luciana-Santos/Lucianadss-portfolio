@@ -21,8 +21,8 @@ a {
   text-decoration: none;
   color: var(--cl-md-green);
   font-style: italic;
-  transition: .3s ease-in-out;
   font-weight: bold;
+  transition: .3s ease;
 }
 
 ul {
@@ -30,7 +30,7 @@ ul {
 }
 
 body {
-  overflow: hidden;
+  position: relative;
   min-height: 100vh;
   line-height: 1.5;
   background-color: var(--cl-vd-blue);
@@ -40,4 +40,75 @@ body {
 
 .section {
   padding-block: rem(30);
+}
+
+// BUTTONS 
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: rem(40);
+}
+
+.btn {
+  text-transform: uppercase;
+  border: none;
+  padding-block: rem(10);
+  padding-inline: rem(26);
+  border-radius: rem(6);
+  cursor: pointer;
+  letter-spacing: rem(1.5);
+  font-weight: bold;
+  transition: .3s ease;
+  font-style: normal;
+  display: grid;
+  place-items: center;
+}
+
+.btn--yellow {
+  background: var(--cl-lt-orange);
+  color: var(--cl-vd-blue);
+
+  &:hover {
+    box-shadow: 0px 0px 20px #F8D092;
+  }
+}
+
+.btn--blue {
+  background: transparent;
+  color: var(--cl-lt-orange);
+  border: 3px solid var(--cl-lt-orange);
+
+  &:hover {
+    background: var(--cl-vd-blue);
+    border-color: transparent;
+  }
+}
+
+.titulo {
+  font-size: rem(30);
+  text-align: center;
+  font-family: var(--ff-Berkshire);
+  color: var(--cl-lt-orange);
+  margin-bottom: rem(60);
+
+  @include breakpoint('medium') {
+    font-size: rem(66);
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+[data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(0, -30px, 0);
+  transition: .3s;
+}
+
+[data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0,0,0);
 }

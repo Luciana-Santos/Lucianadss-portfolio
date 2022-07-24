@@ -2,42 +2,164 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luciana Santos - Desenvolvedora Web</title>
-  <link rel="stylesheet" href="app/styles/styles.css">
+  <link rel="icon" type="image/x-icon" href="./assets/img/lucianadss.ico" />
+  <link rel="stylesheet" href="app/styles/styles.css" />
 
   <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet" />
+
+  <script src="./app/js/index.js" defer></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="wip__wrapper">
-      <section class="wip">
-        <h1 class="titulo">Em construção...</h1>
-        <div class="container wip__gears">
-          <div class="gear--right">
-            <img src="./assets/gear.png" alt="">
-          </div>
-          <div class="gear--left">
-            <img src="./assets/gear-right.png" alt="">
-          </div>
+  <header class="header">
+    <nav class="container" data-menu="suave">
+      <ul class="header__menu">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        </div>
-        <p>
-          Esta página está ainda em construção, mas você pode conferir <a href="https://github.com/Luciana-Santos">aqui</a> outros projetos
-          já concluídos.
-        </p>
+  <section class="hero">
+    <div class="container">
+      <h1>
+        Olá, sou <span>Luciana</span><br />
+        Desenvolvedora front end
+      </h1>
+
+      <div class="btn-container" data-menu="suave">
+        <a href="#contato" class="btn btn--yellow">Contato</a>
+        <a href="./assets/curriculo/Luciana-curriculo.pdf" download="luciana-curriculo" class="btn btn--blue">Currículo</a>
+      </div>
     </div>
-    </section>
-  </div>
-  </div>
+  </section>
 
-  <script src="./app/js/index.js" defer></script>
+  <section class="sobre container section" id="sobre" data-anime="scroll">
+    <h1 class="titulo">Sobre</h1>
+
+    <div class="sobre__content">
+      <div class="sobre__info">
+        <p>
+          Sou Luciana Santos, 24 anos, residente de São Paulo-SP. <br>
+          Desenvolvedora front end e Estudante de Análise e Desenvolvimento de
+          Sistemas.
+        </p>
+        <p>
+          Minha parte favorita em trabalhar com desenvolvimento web é poder
+          transformar ideias em linhas de códigos executáveis e ver o
+          resultado fluir na tela.<br />
+          Estou sempre aprendendo algo novo e subindo mais um degrau para
+          chegar no meu objetivo, que não é estático e está em constante
+          desenvolvimento.
+        </p>
+
+        <div class="links-tecs">
+          <div class="links">
+            <h3>Links:</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+              <li><a href="https://github.com/Luciana-Santos">GitHub</a></li>
+              <li><a href="https://codepen.io/luciana-santos">CodePen</a></li>
+            </ul>
+          </div>
+
+          <div class="tecs">
+            <h3>Tecnologias:</h3>
+            <ul>
+              <li>
+                <img src="./assets/img/html-icon.png" alt="HTML" /><span>HTML</span>
+              </li>
+              <li>
+                <img src="./assets/img/css-icon.png" alt="CSS" /><span>CSS</span>
+              </li>
+              <li>
+                <img src="./assets/img/sass-icon.png" alt="Sass" /><span>Sass</span>
+              </li>
+              <li>
+                <img src="./assets/img/javascript-icon.png" alt="JavaScript" /><span>JavaScript</span>
+              </li>
+              <li>
+                <img src="./assets/img/react-icon.png" alt="React js" /><span>React.js</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre__img">
+        <img src="./assets/img/sobre-section.png" alt="sobre illustração" />
+      </div>
+    </div>
+  </section>
+
+  <section class="container section projetos" id="projetos" data-anime="scroll">
+    <h1 class="titulo">Projetos</h1>
+
+    <div class="projetos__wrapper" data-projetos="container">
+      <!-- container de todos os projetos -->
+      <div class="projeto__container">
+        <!-- projeto -->
+        <!-- <div class="projeto__item" data-projeto="content">
+          <div class="item__img">
+            <img src="./assets/img/projeto-teste.png" alt="">
+          </div>
+          <div class="item__info">
+            <p>Sistema Solar - Projeto final do curso de JavaScript</p>
+
+            <ul>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Live</a></li>
+            </ul>
+          </div>
+        </div> -->
+        <!-- fim projeto -->
+      </div>
+      <!-- fim container de todos os projetos -->
+    </div>
+  </section>
+
+  <section class="section container contato" id="contato" data-anime="scroll">
+    <h1 class="titulo">Contato</h1>
+
+    <div class="info__wrapper">
+      <div class="contato__info">
+        <p>Disponivel para novos projetos.</p>
+        <p>Entre em contato e bora bater um papo!</p>
+        <ul>
+          <li>
+            <a href="mailto:luciydss@gmail.com"><img src="./assets/img/mail-icon.svg" alt="" /><span>Luciydss@gmail.com</span></a>
+          </li>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=5511984483922"><img src="./assets/img/whatsapp-icon.svg" alt="" /><span>(11) 98448-3922</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="contato__img">
+        <img src="./assets/img/contato-img.png" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer container">
+    <p>
+      Boa parte dos direitos reservados. |
+      <a href="https://github.com/Luciana-Santos">Luciana Santos&copy</a> 2022
+    </p>
+  </footer>
+
+  <div class="btn-topo" data-topo="btn">
+    <img src="./assets/img/ufo-topo.png" alt="" />
+    <span>Topo</span>
+  </div>
 </body>
 
 </html>

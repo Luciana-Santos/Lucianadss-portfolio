@@ -1,0 +1,46 @@
+@use '../utils/' as *;
+
+.projetos {
+  min-height: 100vh;
+
+  &__wrapper {
+    max-width: fit-content;
+    margin-inline: auto;
+
+    @include breakpoint('medium') {
+      column-count: 2;
+    }
+  }
+
+  .projeto__item {
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--cl-dk-violet);
+    position: relative;
+    transition: .3s ease;
+    max-width: 300px;
+    margin-bottom: rem(20);
+    position: relative;
+
+    .item__img {
+      max-width: 300px;
+      height: fit-content;
+    }
+
+    .item__info {
+      padding: 10px;
+      max-width: fit-content;
+      display: grid;
+      gap: rem(16);
+
+      p {
+        font-size: rem(14);
+      }
+
+      ul {
+        display: flex;
+        gap: rem(20);
+      }
+    }
+  }
+}
