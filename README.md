@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://lucianadss.netlify.app/">
     <img src="https://github.com/Luciana-Santos/Lucianadss-portfolio/blob/main/src/assets/img/contato-img.png?raw=true" alt="Logo" width="100">
   </a>
 
