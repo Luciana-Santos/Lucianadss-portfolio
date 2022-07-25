@@ -16,11 +16,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-[![Stargazers][stars-shield]](https://github.com/Luciana-Santos/Lucianadss-portfolio/stargazers)
-[![Issues][issues-shield]](https://github.com/Luciana-Santos/Lucianadss-portfolio/issues)
-[![MIT License][license-shield]](https://github.com/Luciana-Santos/Lucianadss-portfolio/blob/main/LICENSE)
-[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/luciana-dss/)
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
