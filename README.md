@@ -7,6 +7,20 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+
+[![Stargazers][stars-shield]](https://github.com/Luciana-Santos/Lucianadss-portfolio/stargazers)
+[![Issues][issues-shield]](https://github.com/Luciana-Santos/Lucianadss-portfolio/issues)
+[![MIT License][license-shield]](https://github.com/Luciana-Santos/Lucianadss-portfolio/blob/main/LICENSE)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/luciana-dss/)
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
