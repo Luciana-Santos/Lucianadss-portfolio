@@ -1,7 +1,7 @@
 {
-  "name": "static-setup",
+  "name": "Luciana Santos - Portfólio",
   "version": "1.0.0",
-  "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML and JavaScript Webpack compiler.",
+  "description": "Portfólio pessoal para exposição de projetos.",
   "main": "dist/index.html",
   "author": "LucianaSantos",
   "scripts": {
