@@ -37,11 +37,26 @@
   min-height: 50vh;
   margin-top: 3.75rem;
 }
+.hero p {
+  margin-bottom: 5.625rem;
+  color: var(--cl-md-turquoise);
+}
+.hero p::after {
+  content: "|";
+  display: inline-block;
+  margin-left: 0.3125rem;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+@media (min-width: 43.75em) {
+  .hero p {
+    font-size: 1.625rem;
+  }
+}
 .hero h1 {
   color: var(--cl-md-turquoise);
   font-size: 1.25rem;
   line-height: 1.4;
-  margin-bottom: 5.625rem;
 }
 .hero h1 span {
   color: var(--cl-lt-orange);

@@ -11,11 +11,27 @@
   min-height: 50vh;
   margin-top: rem(60);
 
+  p {
+    margin-bottom: rem(90);
+    color: var(--cl-md-turquoise);
+
+    &::after {
+      content: '|';
+      display: inline-block;
+      margin-left: rem(5);
+      opacity: 1;
+      animation: blink .7s infinite;
+    }
+    
+    @include breakpoint(medium) {
+      font-size: rem(26);
+    }
+  }
+
   h1 {
     color: var(--cl-md-turquoise);
     font-size: rem(20);
     line-height: 1.4;
-    margin-bottom: rem(90);
 
     span {
       color: var(--cl-lt-orange);
