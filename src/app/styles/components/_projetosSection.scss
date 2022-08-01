@@ -6,10 +6,15 @@
   &__wrapper {
     max-width: fit-content;
     margin-inline: auto;
+    display: grid;
+    gap: rem(30);
 
     @include breakpoint('medium') {
-      column-count: 2;
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
+  .projeto__container {
+    display: grid;
   }
 
   .projeto__item {
@@ -19,7 +24,6 @@
     position: relative;
     transition: .3s ease;
     max-width: 300px;
-    margin-bottom: rem(20);
     position: relative;
 
     .item__img {

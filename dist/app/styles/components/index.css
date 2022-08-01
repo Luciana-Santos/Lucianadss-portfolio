@@ -152,11 +152,16 @@
 .projetos__wrapper {
   max-width: fit-content;
   margin-inline: auto;
+  display: grid;
+  gap: 1.875rem;
 }
 @media (min-width: 43.75em) {
   .projetos__wrapper {
-    column-count: 2;
+    grid-template-columns: repeat(2, 1fr);
   }
+}
+.projetos .projeto__container {
+  display: grid;
 }
 .projetos .projeto__item {
   border-radius: 6px;
@@ -165,7 +170,6 @@
   position: relative;
   transition: 0.3s ease;
   max-width: 300px;
-  margin-bottom: 1.25rem;
   position: relative;
 }
 .projetos .projeto__item .item__img {
