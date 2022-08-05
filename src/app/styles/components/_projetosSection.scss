@@ -6,15 +6,10 @@
   &__wrapper {
     max-width: fit-content;
     margin-inline: auto;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
     gap: rem(30);
-
-    @include breakpoint('medium') {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .projeto__container {
-    display: grid;
   }
 
   .projeto__item {
@@ -23,28 +18,54 @@
     background: var(--cl-dk-violet);
     position: relative;
     transition: .3s ease;
-    max-width: 300px;
     position: relative;
+    height: 246px;
+    max-width: 300px;
 
     .item__img {
-      max-width: 300px;
       height: fit-content;
     }
 
     .item__info {
       padding: 10px;
       max-width: fit-content;
+      position: absolute;
+      top: 69%;
+      background: var(--cl-dk-violet);
       display: grid;
       gap: rem(16);
 
-      p {
+      h4 {
         font-size: rem(14);
+        font-weight: normal;
       }
 
       ul {
         display: flex;
         gap: rem(20);
       }
+
+      .tecs {
+
+        span {
+          top: -34px;
+          height: fit-content;
+        }
+
+        li {
+          max-width: 44px;
+        }
+      }
+    }
+
+    &:hover .item__info, &:active .item__info {
+      top: 0;
+      height: 100%;
+      transition: top .5s;
+    }
+
+    @include breakpoint(medium) {
+      width: 300px;
     }
   }
 }
