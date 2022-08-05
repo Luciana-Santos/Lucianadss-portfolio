@@ -2,8 +2,10 @@ export default function initFetchProjetos() {
   function createProjeto(projeto) {
     const {
       titulo,
+      descricao,
       imagem,
       links: { live, code },
+      tecnologies,
     } = projeto;
     const div = document.createElement('div');
     div.classList.add('projeto__container');
@@ -11,18 +13,26 @@ export default function initFetchProjetos() {
     div.innerHTML = `
       <!-- projeto -->
       <div class="projeto__item" data-projeto="content">
-        <div class="item__img">
-          <img src="${imagem}" alt="${titulo}">
-        </div>
-        <div class="item__info">
-          <p>${titulo}</p>
+          <div class="item__img">
+            <img src="${imagem}" alt="${titulo}">
+          </div>
+          <div class="item__info">
+            <h4>${titulo}</h4>
 
-          <ul>
-            <li><a href="${code}" target=”_blank”>GitHub</a></li>
-            <li><a href="${live}" target=”_blank”>Live</a></li>
-          </ul>
+            <ul>
+              <li><a href="${code}">Github</a></li>
+              <li><a href="${live}">Live</a></li>
+            </ul>
+
+            <p>${descricao}</p>
+
+            <div class="tecs">
+              <ul>
+              ${tecnologies.map((item) => `<li><img src="${item.icon}" alt=""><span>${item.label}</span></li>`).join('')}
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
       <!-- fim projeto -->
     `;
 

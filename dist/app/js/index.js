@@ -456,13 +456,17 @@ __webpack_require__.r(__webpack_exports__);
 function initFetchProjetos() {
   function createProjeto(projeto) {
     var titulo = projeto.titulo,
+        descricao = projeto.descricao,
         imagem = projeto.imagem,
         _projeto$links = projeto.links,
         live = _projeto$links.live,
-        code = _projeto$links.code;
+        code = _projeto$links.code,
+        tecnologies = projeto.tecnologies;
     var div = document.createElement('div');
     div.classList.add('projeto__container');
-    div.innerHTML = "\n      <!-- projeto -->\n      <div class=\"projeto__item\" data-projeto=\"content\">\n        <div class=\"item__img\">\n          <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n        </div>\n        <div class=\"item__info\">\n          <p>").concat(titulo, "</p>\n\n          <ul>\n            <li><a href=\"").concat(code, "\" target=\u201D_blank\u201D>GitHub</a></li>\n            <li><a href=\"").concat(live, "\" target=\u201D_blank\u201D>Live</a></li>\n          </ul>\n        </div>\n      </div>\n      <!-- fim projeto -->\n    ");
+    div.innerHTML = "\n      <!-- projeto -->\n      <div class=\"projeto__item\" data-projeto=\"content\">\n          <div class=\"item__img\">\n            <img src=\"".concat(imagem, "\" alt=\"").concat(titulo, "\">\n          </div>\n          <div class=\"item__info\">\n            <h4>").concat(titulo, "</h4>\n\n            <ul>\n              <li><a href=\"").concat(code, "\">Github</a></li>\n              <li><a href=\"").concat(live, "\">Live</a></li>\n            </ul>\n\n            <p>").concat(descricao, "</p>\n\n            <div class=\"tecs\">\n              <ul>\n              ").concat(tecnologies.map(function (item) {
+      return "<li><img src=\"".concat(item.icon, "\" alt=\"\"><span>").concat(item.label, "</span></li>");
+    }).join(''), "\n              </ul>\n            </div>\n          </div>\n        </div>\n      <!-- fim projeto -->\n    ");
     return div;
   }
 
