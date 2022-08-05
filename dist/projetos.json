@@ -1,18 +1,48 @@
 [
   {
-    "titulo": "Sistema Solar - Projeto final de JavaScript.",
+    "titulo": "Sistema Solar",
+    "descricao": "Projeto de conclusão do curso de JavaScript da Origamid.",
+    "tecnologies": [
+      {
+        "label": "HTML",
+        "icon": "./assets/img/html-icon.png"
+      },
+      {
+        "label": "SASS",
+        "icon": "./assets/img/sass-icon.png"
+      },
+      {
+        "label": "JavaScript",
+        "icon": "./assets/img/javascript-icon.png"
+      }
+    ],
     "links": {
       "live": "https://sistema-solar-luciana.netlify.app/",
       "code": "https://github.com/Luciana-Santos/sistema_solar"
     },
-    "imagem": "./assets/img/sistema_solar-preview.jpg"
+    "imagem": "./assets/img/portfolio-preview.jpg"
   },
   {
-    "titulo": "Luciana Santos - Portfólio.",
+    "titulo": "Luciana - Portfólio",
+    "descricao": "Portfólio criado para exibir projetos já concluídos.",
+    "tecnologies": [
+      {
+        "label": "HTML",
+        "icon": "./assets/img/html-icon.png"
+      },
+      {
+        "label": "SASS",
+        "icon": "./assets/img/sass-icon.png"
+      },
+      {
+        "label": "JavaScript",
+        "icon": "./assets/img/javascript-icon.png"
+      }
+    ],
     "links": {
       "live": "https://lucianadss.netlify.app/",
       "code": "https://github.com/Luciana-Santos/Lucianadss-portfolio"
     },
-    "imagem": "./assets/img/portfolio-preview.jpg"
+    "imagem": "./assets/img/sistema_solar-preview.jpg"
   }
 ]
