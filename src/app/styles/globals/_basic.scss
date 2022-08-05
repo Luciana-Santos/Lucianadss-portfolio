@@ -112,3 +112,38 @@ body {
   opacity: 1;
   transform: translate3d(0,0,0);
 }
+
+.tecs {
+
+  span {
+    font-size: rem(12);
+    letter-spacing: 1px;
+    display: none;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    background: var(--cl-dk-violet);
+    padding: rem(5);
+    border-radius: rem(4);
+  }
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: rem(20);
+  }
+
+  li {
+    max-width: 49px;
+    position: relative;
+
+    &:hover, &:active {
+      span {
+        display: block;
+      }
+    }
+  }
+}
