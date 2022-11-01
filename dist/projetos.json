@@ -44,5 +44,28 @@
       "code": "https://github.com/Luciana-Santos/Lucianadss-portfolio"
     },
     "imagem": "./assets/img/portfolio-preview.jpg"
+  },
+  {
+    "titulo": "Lista de Leitura - EM BREVE",
+    "descricao": "App para cadastro de livros e progresso de leitura.",
+    "tecnologies": [
+      {
+        "label": "HTML",
+        "icon": "./assets/img/html-icon.png"
+      },
+      {
+        "label": "SASS",
+        "icon": "./assets/img/sass-icon.png"
+      },
+      {
+        "label": "JavaScript",
+        "icon": "./assets/img/javascript-icon.png"
+      }
+    ],
+    "links": {
+      "live": "",
+      "code": ""
+    },
+    "imagem": "./assets/img/booklist-preview.png"
   }
 ]
