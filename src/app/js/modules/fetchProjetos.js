@@ -20,15 +20,24 @@ export default function initFetchProjetos() {
             <h4>${titulo}</h4>
 
             <ul>
-              <li><a href="${code}">Github</a></li>
-              <li><a href="${live}">Live</a></li>
+              <li><a href="${code || '/'}" target="_blank">${
+      code ? 'Github' : 'Em breve'
+    }</a></li>
+              <li><a href="${live || '/'}" target="_blank">${
+      code ? 'Live' : 'Em breve'
+    }</a></li>
             </ul>
 
             <p>${descricao}</p>
 
             <div class="tecs">
               <ul>
-              ${tecnologies.map((item) => `<li><img src="${item.icon}" alt=""><span>${item.label}</span></li>`).join('')}
+              ${tecnologies
+                .map(
+                  (item) =>
+                    `<li><img src="${item.icon}" alt=""><span>${item.label}</span></li>`,
+                )
+                .join('')}
               </ul>
             </div>
           </div>
