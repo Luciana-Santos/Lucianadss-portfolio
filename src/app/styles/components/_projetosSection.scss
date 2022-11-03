@@ -2,6 +2,7 @@
 
 .projetos {
   min-height: 100vh;
+  position: relative;
 
   &__wrapper {
     max-width: fit-content;
@@ -17,7 +18,7 @@
     overflow: hidden;
     background: var(--cl-dk-violet);
     position: relative;
-    transition: .3s ease;
+    transition: 0.3s ease;
     position: relative;
     height: 246px;
     max-width: 300px;
@@ -46,7 +47,6 @@
       }
 
       .tecs {
-
         span {
           top: -34px;
           height: fit-content;
@@ -58,10 +58,11 @@
       }
     }
 
-    &:hover .item__info, &:active .item__info {
+    &:hover .item__info,
+    &:active .item__info {
       top: 0;
       height: 100%;
-      transition: top .5s;
+      transition: top 0.5s;
     }
 
     @include breakpoint(medium) {

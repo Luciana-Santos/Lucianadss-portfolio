@@ -122,6 +122,7 @@
 
 .projetos {
   min-height: 100vh;
+  position: relative;
 }
 .projetos__wrapper {
   max-width: fit-content;
@@ -228,6 +229,69 @@
   font-size: 0.75rem;
   cursor: pointer;
   z-index: 1000;
+}
+
+.modal_container {
+  width: 100%;
+  height: 100%;
+  background: var(--cl-backdrop-modal);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-content: center;
+  z-index: 1001;
+  padding-block: 2.5rem;
+  padding-inline: 1.25rem;
+}
+.modal_container .modal {
+  width: clamp(270px, 80vw, 900px);
+  padding-inline: clamp(1.25rem, 5vw, 3.75rem);
+  padding-block: clamp(1.875rem, 5vw, 3.75rem);
+  background: var(--cl-dk-violet);
+  position: relative;
+}
+.modal_container .modal h2 {
+  color: var(--cl-md-turquoise);
+  font-family: var(--ff-Berkshire);
+  font-size: clamp(1.375rem, 5vw, 1.875rem);
+  line-height: 1.6875rem;
+  text-align: center;
+  margin-bottom: clamp(1.25rem, 5vw, 3.75rem);
+}
+.modal_container .modal__content {
+  display: grid;
+  gap: clamp(1.25rem, 5vw, 1.875rem);
+}
+@media (min-width: 43.75em) {
+  .modal_container .modal__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.modal_container .modal__info {
+  display: grid;
+  gap: 1.875rem;
+}
+.modal_container .modal__info .tecs {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.modal_container .modal__info .tecs span {
+  bottom: -38px;
+}
+.modal_container .modal__info .links {
+  display: flex;
+  gap: 1.25rem;
+}
+.modal_container .modal .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1.25rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
