@@ -1,11 +1,11 @@
-import initFetchProjetos from './modules/fetchProjetos';
+// import initFetchProjetos from './modules/fetchProjetos';
 import ScrollAnima from './modules/scrollAnima';
 import initScrollSuave from './modules/scrollsuave';
 import initTypingEffect from './modules/typingEffect';
 import initVoltarTopoBtn from './modules/voltarTopo';
 
 initScrollSuave();
-initFetchProjetos();
+// initFetchProjetos();
 initVoltarTopoBtn();
 initTypingEffect();
 
