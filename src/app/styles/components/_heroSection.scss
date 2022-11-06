@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-block: rem(60);
+  padding-block: clamp(rem(60), 5vw, rem(90));
   text-align: center;
   min-height: 50vh;
   margin-top: rem(60);
@@ -14,43 +14,30 @@
   p {
     margin-bottom: rem(90);
     color: var(--cl-md-turquoise);
+    font-size: clamp(rem(16), 5vw, rem(26));
 
     &::after {
       content: '|';
       display: inline-block;
       margin-left: rem(5);
       opacity: 1;
-      animation: blink .7s infinite;
-    }
-    
-    @include breakpoint(medium) {
-      font-size: rem(26);
+      animation: blink 0.7s infinite;
     }
   }
 
   h1 {
     color: var(--cl-md-turquoise);
-    font-size: rem(20);
+    font-size: clamp(rem(20), 5vw, rem(38));
     line-height: 1.4;
 
     span {
       color: var(--cl-lt-orange);
       font-family: var(--ff-Berkshire);
-      font-size: rem(36);
-    }
-
-    @include breakpoint('medium') {
-      font-size: rem(38);
-
-      span {
-        font-size: rem(66);
-      }
+      font-size: clamp(rem(36), 5vw, rem(66));
     }
   }
-  
+
   @include breakpoint('medium') {
     height: calc(100vh - 60px);
-    padding: rem(90);
   }
 }
-

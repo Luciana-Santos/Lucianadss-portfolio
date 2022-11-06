@@ -32,7 +32,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  padding-block: 3.75rem;
+  padding-block: clamp(3.75rem, 5vw, 5.625rem);
   text-align: center;
   min-height: 50vh;
   margin-top: 3.75rem;
@@ -40,6 +40,7 @@
 .hero p {
   margin-bottom: 5.625rem;
   color: var(--cl-md-turquoise);
+  font-size: clamp(1rem, 5vw, 1.625rem);
 }
 .hero p::after {
   content: "|";
@@ -48,33 +49,19 @@
   opacity: 1;
   animation: blink 0.7s infinite;
 }
-@media (min-width: 43.75em) {
-  .hero p {
-    font-size: 1.625rem;
-  }
-}
 .hero h1 {
   color: var(--cl-md-turquoise);
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 5vw, 2.375rem);
   line-height: 1.4;
 }
 .hero h1 span {
   color: var(--cl-lt-orange);
   font-family: var(--ff-Berkshire);
-  font-size: 2.25rem;
-}
-@media (min-width: 43.75em) {
-  .hero h1 {
-    font-size: 2.375rem;
-  }
-  .hero h1 span {
-    font-size: 4.125rem;
-  }
+  font-size: clamp(2.25rem, 5vw, 4.125rem);
 }
 @media (min-width: 43.75em) {
   .hero {
     height: calc(100vh - 60px);
-    padding: 5.625rem;
   }
 }
 
