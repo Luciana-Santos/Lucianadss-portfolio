@@ -46,7 +46,7 @@
     "imagem": "./assets/img/portfolio-preview.jpg"
   },
   {
-    "titulo": "Lista de Leitura - EM BREVE",
+    "titulo": "Lista de Leitura",
     "descricao": "App para cadastro de livros e progresso de leitura.",
     "tecnologies": [
       {
@@ -63,8 +63,8 @@
       }
     ],
     "links": {
-      "live": "",
-      "code": ""
+      "live": "https://lista-de-leitura.netlify.app/",
+      "code": "https://github.com/Luciana-Santos/lista-de-leitura"
     },
     "imagem": "./assets/img/booklist-preview.png"
   }
