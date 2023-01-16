@@ -23,7 +23,7 @@
     <img src="https://github.com/Luciana-Santos/Lucianadss-portfolio/blob/main/src/assets/img/contato-img.png?raw=true" alt="Logo" width="100">
   </a>
 
-  <h3 align="center">Luciana Santos - Portfólio</h3>
+  <h3 align="center">Old version | Luciana Santos - Portfólio</h3>
 
   <p align="center">
     Portfólio de projetos de desenvolvimento web.
